@@ -220,9 +220,45 @@ const Add = ({token}) => {
                     </div>
 
                     <div
+                        onClick={() => setSizesL((prev) => prev.includes('350cm') ? prev.filter(item => item !== "350cm") : [...prev, "350cm"])}>
+                        <p className={`${sizesL.includes("350cm") ? "bg-pink-100" : "bg-slate-200"} px-3 py-1 cursor-pointer`}>350cm</p>
+                    </div>
+
+                    <div
                         onClick={() => setSizesL((prev) => prev.includes('400cm') ? prev.filter(item => item !== "400cm") : [...prev, "400cm"])}>
                         <p className={`${sizesL.includes("400cm") ? "bg-pink-100" : "bg-slate-200"} px-3 py-1 cursor-pointer`}>400cm</p>
                     </div>
+
+                    <div
+                        onClick={() => setSizesL((prev) => prev.includes('450cm') ? prev.filter(item => item !== "450cm") : [...prev, "450cm"])}>
+                        <p className={`${sizesL.includes("450cm") ? "bg-pink-100" : "bg-slate-200"} px-3 py-1 cursor-pointer`}>450cm</p>
+                    </div>
+
+                    <div
+                        onClick={() => setSizesL((prev) => prev.includes('500cm') ? prev.filter(item => item !== "500cm") : [...prev, "500cm"])}>
+                        <p className={`${sizesL.includes("500cm") ? "bg-pink-100" : "bg-slate-200"} px-3 py-1 cursor-pointer`}>500cm</p>
+                    </div>
+
+                    <div
+                        onClick={() => setSizesL((prev) => prev.includes('550cm') ? prev.filter(item => item !== "550cm") : [...prev, "550cm"])}>
+                        <p className={`${sizesL.includes("550cm") ? "bg-pink-100" : "bg-slate-200"} px-3 py-1 cursor-pointer`}>550cm</p>
+                    </div>
+
+                    <div
+                        onClick={() => setSizesL((prev) => prev.includes('600cm') ? prev.filter(item => item !== "600cm") : [...prev, "600cm"])}>
+                        <p className={`${sizesL.includes("600cm") ? "bg-pink-100" : "bg-slate-200"} px-3 py-1 cursor-pointer`}>600cm</p>
+                    </div>
+
+                    <div
+                        onClick={() => setSizesL((prev) => prev.includes('650cm') ? prev.filter(item => item !== "650cm") : [...prev, "650cm"])}>
+                        <p className={`${sizesL.includes("650cm") ? "bg-pink-100" : "bg-slate-200"} px-3 py-1 cursor-pointer`}>650cm</p>
+                    </div>
+
+                    <div
+                        onClick={() => setSizesL((prev) => prev.includes('700cm') ? prev.filter(item => item !== "700cm") : [...prev, "700cm"])}>
+                        <p className={`${sizesL.includes("700cm") ? "bg-pink-100" : "bg-slate-200"} px-3 py-1 cursor-pointer`}>700cm</p>
+                    </div>
+
 
                 </div>
             </div>
@@ -232,7 +268,7 @@ const Add = ({token}) => {
                 <div className='flex gap-3'>
                     <div
                         onClick={() => setSizesH(prev => prev.includes('100cm') ? prev.filter(item => item !== "100cm") : [...prev, "100cm"])}>
-                        <p className={`${sizesH.includes("100cm") ? "bg-pink-100" : "bg-slate-200"} px-3 py-1 cursor-pointer`}>100cm</p>
+                    <p className={`${sizesH.includes("100cm") ? "bg-pink-100" : "bg-slate-200"} px-3 py-1 cursor-pointer`}>100cm</p>
                     </div>
 
                     <div
@@ -256,9 +292,45 @@ const Add = ({token}) => {
                     </div>
 
                     <div
+                        onClick={() => setSizesH((prev) => prev.includes('350cm') ? prev.filter(item => item !== "350cm") : [...prev, "350cm"])}>
+                        <p className={`${sizesH.includes("350cm") ? "bg-pink-100" : "bg-slate-200"} px-3 py-1 cursor-pointer`}>350cm</p>
+                    </div>
+
+                    <div
                         onClick={() => setSizesH((prev) => prev.includes('400cm') ? prev.filter(item => item !== "400cm") : [...prev, "400cm"])}>
                         <p className={`${sizesH.includes("400cm") ? "bg-pink-100" : "bg-slate-200"} px-3 py-1 cursor-pointer`}>400cm</p>
                     </div>
+
+                    <div
+                        onClick={() => setSizesH((prev) => prev.includes('450cm') ? prev.filter(item => item !== "450cm") : [...prev, "450cm"])}>
+                        <p className={`${sizesH.includes("450cm") ? "bg-pink-100" : "bg-slate-200"} px-3 py-1 cursor-pointer`}>450cm</p>
+                    </div>
+
+                    <div
+                        onClick={() => setSizesH((prev) => prev.includes('500cm') ? prev.filter(item => item !== "500cm") : [...prev, "500cm"])}>
+                        <p className={`${sizesH.includes("500cm") ? "bg-pink-100" : "bg-slate-200"} px-3 py-1 cursor-pointer`}>500cm</p>
+                    </div>
+
+                    <div
+                        onClick={() => setSizesH((prev) => prev.includes('550cm') ? prev.filter(item => item !== "550cm") : [...prev, "550cm"])}>
+                        <p className={`${sizesH.includes("550cm") ? "bg-pink-100" : "bg-slate-200"} px-3 py-1 cursor-pointer`}>550cm</p>
+                    </div>
+
+                    <div
+                        onClick={() => setSizesH((prev) => prev.includes('600cm') ? prev.filter(item => item !== "600cm") : [...prev, "600cm"])}>
+                        <p className={`${sizesH.includes("600cm") ? "bg-pink-100" : "bg-slate-200"} px-3 py-1 cursor-pointer`}>600cm</p>
+                    </div>
+
+                    <div
+                        onClick={() => setSizesH((prev) => prev.includes('650cm') ? prev.filter(item => item !== "650cm") : [...prev, "650cm"])}>
+                        <p className={`${sizesH.includes("650cm") ? "bg-pink-100" : "bg-slate-200"} px-3 py-1 cursor-pointer`}>650cm</p>
+                    </div>
+
+                    <div
+                        onClick={() => setSizesH((prev) => prev.includes('700cm') ? prev.filter(item => item !== "700cm") : [...prev, "700cm"])}>
+                        <p className={`${sizesH.includes("700cm") ? "bg-pink-100" : "bg-slate-200"} px-3 py-1 cursor-pointer`}>700cm</p>
+                    </div>
+
 
                 </div>
             </div>

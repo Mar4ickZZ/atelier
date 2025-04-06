@@ -6,16 +6,20 @@ const addProduct = async (req, res) => {
     try {
         const { name, description, price, category, subCategory, sizesH, sizesL, bestseller } = req.body;
 
-        const images = ["image1", "image2", "image3", "image4"]
-            .map((key) => req.files[key]?.[0])
-            .filter(Boolean);
+        const image1 = req.files.image1 && req.files.image1[0]
+        const image2 = req.files.image2 && req.files.image2[0]
+        const image3 = req.files.image3 && req.files.image3[0]
+        const image4 = req.files.image4 && req.files.image4[0]
+
+        const images = [image1, image2, image3, image4].filter((item) => item !== undefined)
 
         let imagesUrl = await Promise.all(
             images.map(async (item) => {
-                let result = await cloudinary.uploader.upload(item.path, { resource_type: "image" });
+                let result = await cloudinary.uploader.upload(item.path, { resource_type: 'image' });
                 return result.secure_url;
             })
         );
+
 
         const productData = {
             name,
@@ -23,7 +27,7 @@ const addProduct = async (req, res) => {
             category,
             price: Number(price),
             subCategory,
-            bestseller: bestseller === "true",
+            bestseller: bestseller === "true" ? true : false,
             sizesH: JSON.parse(sizesH),
             sizesL: JSON.parse(sizesL),
             image: imagesUrl,
@@ -47,7 +51,7 @@ const listProducts = async (req, res) => {
         res.json({ success: true, products });
     } catch (error) {
         console.log(error);
-        res.json({ succes: false, message: error.message });
+        res.json({ sucess: false, message: error.message });
     }
 };
 

@@ -69,12 +69,13 @@ return (<div>
                 <p className='mt-3 mb-2 font-medium'>{order.address.firstName + " " + order.address.lastName}</p>
                 <div>
                     <p>{order.address.street + ","}</p>
-                    <p>{order.address.city + ", " + order.address.state + ", " + order.address.country + ", " + order.address.zipcode}</p>
+                    <p>{order.address.city + ", " + order.address.state + ", " + order.address.zipcode}</p>
                 </div>
                 <p>{order.address.phone}</p>
+                <p>{order.address.email}</p>
             </div>
             <div>
-                <p className='text-sm sm:text-[15px]'>Cantitatea : {order.items.length}</p>
+            <p className='text-sm sm:text-[15px]'>Cantitatea : {order.items.length}</p>
                 <p className='mt-3'>Metoda de plată : {order.paymentMethod}</p>
                 <p>Plată : {order.payment ? 'Făcut' : 'În așteptare'}</p>
                 <p>Data : {new Date(order.date).toLocaleDateString()}</p>

@@ -24,42 +24,34 @@ const calculateTotal = (items) => {
 
 // Placing orders using COD Method
 const placeOrder = async (req, res) => {
+
     try {
-        const { userId, items, address } = req.body;
 
-        const formattedItems = items.map(item => ({
-            _id: item._id,
-            name: item.name,
-            size: item.size,
-            quantity: item.quantity,
-            price: item.price,
-            amount: item.price * item.quantity
-        }));
-
-        const subtotal = calculateTotal(formattedItems);
-        const amount = subtotal + (subtotal > 0 ? deliveryCharge : 0);
+        const { userId, items, amount, address } = req.body
 
         const orderData = {
             userId,
-            items: formattedItems,
+            items,
             address,
             amount,
-            paymentMethod: "Ramburs",
-            payment: false,
+            paymentMethod: "COD",
+            payment:false,
             date: Date.now()
-        };
+        }
 
-        const newOrder = new orderModel(orderData);
-        await newOrder.save();
+        const newOrder = new orderModel(orderData)
+        await newOrder.save()
 
-        await userModel.findByIdAndUpdate(userId, { cartData: {} });
+        await userModel.findByIdAndUpdate(userId,{cartData:{}})
 
-        res.json({ success: true, message: "Comandă plasată" });
+        res.json({success: true, message: "Order Placed"})
+
     } catch (error) {
-        console.log(error);
-        res.json({ success: false, message: error.message });
+        console.log(error)
+        res.json({success:false, message: error.message})
     }
-};
+
+}
 
 
 // Placing orders using Stripe Method

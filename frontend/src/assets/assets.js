@@ -18,6 +18,7 @@ import visaMastercard_logo from './visa-mastercard-logo.webp'
 import instagram_logo from './instagram-logo.webp'
 import facebook_logo from './facebook-logo.webp'
 import tiktok_logo from './tiktok-logo.webp'
+import icon from './icon.ico'
 
 
 export const assets = {
@@ -40,5 +41,6 @@ export const assets = {
     cross_icon,
     instagram_logo,
     tiktok_logo,
-    facebook_logo
+    facebook_logo,
+    icon
 }

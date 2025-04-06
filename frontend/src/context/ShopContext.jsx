@@ -33,7 +33,7 @@ const ShopContextProvider = (props) => {
 
         setCartItems(cartData);
 
-        console.log("Cart after adding:", cartData); // Проверка, что добавляется правильно
+        toast.success('Articol adăugat în coș!');
 
         if (token) {
             try {
@@ -93,6 +93,7 @@ const ShopContextProvider = (props) => {
     const getProductsData = async () => {
         try {
             const response = await axios.get(`${backendUrl}/api/product/list`);
+            console.log(response.data.products);
             if (response.data.success) {
                 setProducts(response.data.products);
             } else {
@@ -102,6 +103,7 @@ const ShopContextProvider = (props) => {
             console.log(error);
             toast.error(error.message);
         }
+
     };
 
     const getUserCart = async (token) => {

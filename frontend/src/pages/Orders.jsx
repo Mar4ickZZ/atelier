@@ -3,6 +3,8 @@ import { ShopContext } from "../context/ShopContext.jsx";
 import Title from "../components/Title.jsx";
 import axios from "axios";
 import { Helmet } from "react-helmet";
+import { useLocation } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Orders = () => {
     const { backendUrl, token, currency } = useContext(ShopContext);
@@ -52,6 +54,16 @@ const Orders = () => {
     };
 
     useEffect(() => {
+        loadOrderData();
+    }, [token]);
+
+    const location = useLocation();
+
+    useEffect(() => {
+        if (location.state?.orderSuccess) {
+            toast.success("Comanda a fost plasată cu succes!");
+        }
+
         loadOrderData();
     }, [token]);
 

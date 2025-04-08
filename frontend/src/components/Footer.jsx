@@ -27,8 +27,8 @@ const Footer = () => {
                             <li>Cunoaște-ne</li>
                         </NavLink>
 
-                        <NavLink to={'/delivery'}>
-                            <li>Livrare</li>
+                        <NavLink to={'/orders'}>
+                            <li>Сomenzi</li>
                         </NavLink>
 
                         <NavLink to={'/contact'}>
